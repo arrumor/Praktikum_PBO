@@ -5,6 +5,9 @@ import model.Admin;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+
+// anjay 
+
 public class Main {
     private static ArrayList<Aksesori> data_aksesori = new ArrayList<Aksesori>();
     private static ArrayList<Kategori> data_kategori = new ArrayList<Kategori>();
