@@ -14,11 +14,11 @@ public class Kategori{
         return id_kategori;
     }
 
-    public String getNamaKategori(){
+    public String get_nama_kategori(){
         return nama_kategori;
     }
 
-    public void setNamaKategori(String nama_kategori){
+    public void set_nama_kategori(String nama_kategori){
         this.nama_kategori = nama_kategori;
     }
 
