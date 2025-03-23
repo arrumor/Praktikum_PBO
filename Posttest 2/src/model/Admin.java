@@ -1,22 +1,16 @@
 package model;
 
 public class Admin{
-    private int id_admin;
-    private String email;
-    private String username;
-    private String password;
+    protected String email;
+    protected String username;
+    protected String password;
 
-    public Admin(int id_admin, String email, String username, String password){
-        this.id_admin = id_admin;
+    public Admin(String email, String username, String password){
         this.email = email;
         this.username = username;
         this.password = password;
     }
 
-
-    public int getId_admin(){
-        return id_admin;
-    }
     public String get_email(){
         return email;
     }
@@ -26,7 +20,6 @@ public class Admin{
     public String get_password(){
         return password;
     }
-
 
     public void set_email(String email){
         this.email = email;
@@ -39,6 +32,6 @@ public class Admin{
     }
 
     public String dalam_string(){
-        return "ID Admin: " + id_admin + ", Email: " + email + ", Username: " + username + ", Password: " + password;
+        return "Email: " + email + ", Username: " + username + ", Password: " + password;
     }
 }
