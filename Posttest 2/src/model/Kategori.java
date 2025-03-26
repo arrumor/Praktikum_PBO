@@ -1,20 +1,20 @@
 package model;
 
 public class Kategori{
-    private int id_kategori_counter = 1;
-    private int id_kategori;
+    private int idKategoriCounter = 1;
+    private int idKategori;
     private String nama_kategori;
 
-    public Kategori(int id_kategori, String nama_kategori){
-        this.id_kategori = id_kategori;
+    public Kategori(int idKategori, String nama_kategori){
+        this.idKategori = idKategori;
         this.nama_kategori = nama_kategori;
     }
 
-    public int get_id_kategori(){
-        return id_kategori;
+    public int getIdKategori(){
+        return idKategori;
     }
 
-    public String get_nama_kategori(){
+    public String getNamaKategori(){
         return nama_kategori;
     }
 
@@ -23,6 +23,6 @@ public class Kategori{
     }
 
     public String dalam_string(){
-        return "ID Kategori: " + id_kategori + ", Nama Kategori: " + nama_kategori;
+        return "ID Kategori: " + idKategori + ", Nama Kategori: " + nama_kategori;
     }
 }

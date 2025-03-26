@@ -1,21 +1,19 @@
-import model.Aksesori;
-import model.Kategori;
-import model.Admin;
-
-import service.CRUD;
-
 import java.util.ArrayList;
 import java.util.Scanner;
+import model.Admin;
+import model.Aksesori;
+import model.Kategori;
+import service.CRUD;
 
 public class Main {
-    private static ArrayList<Aksesori> data_aksesori = new ArrayList<Aksesori>();
-    private static ArrayList<Kategori> data_kategori = new ArrayList<Kategori>();
+    private static final ArrayList<Aksesori> dataAksesori = new ArrayList<>();
+    private static final ArrayList<Kategori> dataKategori = new ArrayList<>();    
     
     static {
-        data_kategori.add(new Kategori(1, "-"));
+        dataKategori.add(new Kategori(1, "-"));
     }
 
-    private static Scanner scanner = new Scanner(System.in);
+    private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
         int pilihan, counter = 0;
@@ -29,7 +27,7 @@ public class Main {
             username = scanner.nextLine();
             System.out.print("Password: ");
             password = scanner.nextLine();
-            if (!username.equals(admin.get_username()) || !password.equals(admin.get_password())) {
+            if (!username.equals(admin.getUsername()) || !password.equals(admin.getPassword())) {
                 System.out.println("Username atau password salah");
                 if (counter == 2) {
                     System.out.println("Anda telah mencoba 3 kali, akses ditolak");
@@ -51,7 +49,7 @@ public class Main {
                 System.out.print("Pilihan: ");
                 pilihan = scanner.nextInt();
                 scanner.nextLine();
-                switch(pilihan){
+                switch (pilihan){
                     case 1:
                         CRUD.tambah_aksesori();
                         break;

@@ -9,29 +9,30 @@ public class Admin{
         this.email = email;
         this.username = username;
         this.password = password;
-    }
+        }
 
-    public String get_email(){
+    public String getEmail(){
         return email;
     }
-    public String get_username(){
+    public String getUsername(){
         return username;
     }
-    public String get_password(){
+    public String getPassword(){
         return password;
     }
 
-    public void set_email(String email){
+    public void setEmail(String email){
         this.email = email;
     }
-    public void set_username(String username){
+    public void setUsername(String username){
         this.username = username;
     }
-    public void set_password(String password){
+    public void setPassword(String password){
         this.password = password;
     }
 
-    public String dalam_string(){
+    @Override
+    public String toString(){
         return "Email: " + email + ", Username: " + username + ", Password: " + password;
     }
 }

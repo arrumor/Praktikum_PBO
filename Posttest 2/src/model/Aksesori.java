@@ -1,8 +1,8 @@
 package model;
 
 public class Aksesori{
-    private int id_counter = 1;
-    private int id;
+    private int idCounter = 1;
+    private final int id;
     private String nama;
     private String merek;
     private int harga;
