@@ -1,20 +1,17 @@
 package service;
 
+import java.util.ArrayList;
+import java.util.Scanner;
 import model.Aksesori;
 import model.Kategori;
 
-import java.util.ArrayList;
-import java.util.Scanner;
-
 public class CRUD {
-    public static ArrayList<Aksesori> dataAksesori = new ArrayList<Aksesori>();
-    public static ArrayList<Kategori> dataKategori = new ArrayList<Kategori>();
+    public static ArrayList<Aksesori> dataAksesori = new ArrayList<>();
+    public static ArrayList<Kategori> dataKategori = new ArrayList<>();
     public static Scanner scanner = new Scanner(System.in);
-
-    public CRUD(ArrayList<Aksesori> dataAksesori, ArrayList<Kategori> dataKategori, Scanner scanner) {
-        this.dataAksesori = dataAksesori;
-        this.dataKategori = dataKategori;
-        this.scanner = scanner;
+    
+    static{
+        dataKategori.add(new Kategori(1, "-"));
     }
     
     public static void tambah_aksesori(){

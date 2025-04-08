@@ -6,16 +6,13 @@ import model.Kategori;
 import service.CRUD;
 
 public class Main {
-    private static final ArrayList<Aksesori> dataAksesori = new ArrayList<>();
-    private static final ArrayList<Kategori> dataKategori = new ArrayList<>();    
-    
-    static {
-        dataKategori.add(new Kategori(1, "-"));
-    }
+    public static final ArrayList<Aksesori> dataAksesori = new ArrayList<>();
+    public static final ArrayList<Kategori> dataKategori = new ArrayList<>();    
 
     private static final Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
+        
         int pilihan, counter = 0;
         String username, password;
         
@@ -50,30 +47,14 @@ public class Main {
                 pilihan = scanner.nextInt();
                 scanner.nextLine();
                 switch (pilihan){
-                    case 1:
-                        CRUD.tambah_aksesori();
-                        break;
-                    case 2:
-                        CRUD.lihat_aksesori();
-                        break;
-                    case 3:
-                        CRUD.ubah_aksesori();
-                        break;
-                    case 4:
-                        CRUD.hapus_aksesori();
-                        break;
-                    case 5:
-                        CRUD.tambah_kategori();
-                        break;
-                    case 6:
-                        CRUD.lihat_kategori();
-                        break;
-                    case 7:
-                        System.out.println("Terima kasih telah menggunakan program ini");
-                        break;
-                    default:
-                        System.out.println("Pilihan tidak valid");
-                        break;
+                    case 1 -> CRUD.tambah_aksesori();
+                    case 2 -> CRUD.lihat_aksesori();
+                    case 3 -> CRUD.ubah_aksesori();
+                    case 4 -> CRUD.hapus_aksesori();
+                    case 5 -> CRUD.tambah_kategori();
+                    case 6 -> CRUD.lihat_kategori();
+                    case 7 -> System.out.println("Terima kasih telah menggunakan program ini");
+                    default -> System.out.println("Pilihan tidak valid");
                     }
                 } while(pilihan < 8);
             }

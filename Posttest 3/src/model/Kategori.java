@@ -1,8 +1,7 @@
 package model;
 
 public class Kategori{
-    private int idKategoriCounter = 1;
-    private int idKategori;
+    private final int idKategori;
     private String nama_kategori;
 
     public Kategori(int idKategori, String nama_kategori){
